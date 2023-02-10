@@ -6,7 +6,7 @@
 1. Por que Qualidade é importante para você?
 ```
 
-Resposta: 
+Resposta: A qualidade é importante para mim pois na minha opinião se um produto não tem qualidade ele muito provavelmente não atende ao que o cliente precisa que ele atenda. Muito provavelmente, sem qualidade significa sem eficiencia e sem eficacia. Portanto, qualidade deveria ser o foco de toda empresa. Produtos com qualidade atraem mais clientes e por consequencia geram mais receita e mais lucro!
 
 ```bash
 2. Na sua opinião, quais são as principais razões para se investir em automação de testes?
@@ -79,7 +79,7 @@ Alternativas:
     D) Nenhuma das alternativas anteriores.
 ```
 
-Resposta: 
+Resposta: Alternativa A
 
 ```bash
 7. Dado que o ambiente está configurado para execução de testes automatizados utilizando o Selenium WebDriver, indique a alternativa correta para o código abaixo:
@@ -111,7 +111,7 @@ Alternativas:
     E) Nenhuma das alternativas anteriores.
 ```
 
-Resposta: 
+Resposta: Alternativa A
 
 ```bash
 8.Complete os espaços em branco sobre os verbos HTTP:
