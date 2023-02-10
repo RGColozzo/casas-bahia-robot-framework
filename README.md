@@ -16,6 +16,7 @@ Resposta: A automação de testes evita muito do erro humano que acontecer dentr
 
 ```bash
 3. Indique qual a alternativa correta em relação à diferença entre o re-testing e regression testing:
+    
     A) o re-testing está executando um teste novamente; o regression testing
     procura efeitos colaterais inesperados.
     
@@ -32,14 +33,14 @@ Resposta: A automação de testes evita muito do erro humano que acontecer dentr
     QA engineer.
 ```
 
-Resposta: 
+Resposta: Alternativa A
 
 ```bash
 4. Em um time ágil, como você acredita que a automação se encaixa nas Sprints
 e como podemos garantir que ela aconteça?
 ```
 
-Resposta: 
+Resposta: A automação deve ser encaixada como uma tarefa de sprint que precisa ser desenvolvida e para garantir que ela aconteça o foco do QA deve ser na entrega de automações, enquanto o time em si o ajuda com os testes regressivos que precisam ser feitos em toda sprint para entrega dos pacotes da release.
 
 ```bash
 5. Em uma reunião de planejamento seu time estima 4 semanas para garantir
@@ -48,7 +49,7 @@ compartilha com o time a necessidade legal de entregar a mesma em 2
 semanas. O que você faz?
 ```
 
-Resposta: 
+Resposta: Tento explicar e argumentar a ele que correr com a entrega, quebrando o tempo estimado pela metade, muito provavelmente, em quase 90% ou mais dos casos, vai apenas nos gerar um re-trabalho futuro devido a bugs que podem ser de nivel baixo até critico e que ao invés da entrega levar apenas 4 semanas ela vai acabar levando o dobro devido ao re-trabalho para correção dos bugs e inconsistencias, e re-teste da funcionalidade. 
 
 ```bash
 6. Dado que o ambiente está configurado para execução de testes automatizados utilizando o Selenium WebDriver, indique a alternativa correta em relação ao que ocorrerá com o código abaixo após 10 execuções:
@@ -137,7 +138,7 @@ Resposta:
         _____ /users/:id
 ```
 
-Resposta: 
+Resposta: A = post / B = get / C = patch / D = put / E = delete/users/:id
 
 ```bash
 9. Considere a seguinte criação das tabelas Cliente e Pedido:
@@ -174,8 +175,24 @@ Com base na criação das tabelas acima, responda com a declaração SQL correta
     E) Apagar a tabela Pedidos
 ```
 
-Resposta: 
+Respostas:
 
+A) ALTER TABLE Cliente ADD email VARCHAR(50) NULL;
+
+B) INSERT INTO Cliente (nome, sobrenome, email)
+    VALUES ('José', 'Silva', 'jose@cb.com.br'),
+           ('João', 'Pedro', 'joao@pf.com.br'),
+           ('Pedro', 'Silva', 'pedro@ex.com.br');
+
+C) INSERT INTO Pedidos (cliente_id, produto, preco)
+    VALUES (1, 'Geladeira Brastemp', '1800,00'),
+           (2, 'Fogão Consul', '850,90'),
+           (3, 'Celular Iphone XR', '3399,00');
+
+D) SELECT * FROM Pedidos INNER JOIN Cliente ON Pedidos.cliente_id = Cliente.id WHERE Cliente.sobrenome = 'Silva';
+
+E) DROP TABLE Pedidos;
+    
 ```bash
 10.Acesse o blog do Agi: https://blogdoagi.com.br/.
 Considerando a pesquisa de artigos do blog (lupa no canto superior esquerdo), liste os possíveis cenários para a respectiva funcionalidade.
