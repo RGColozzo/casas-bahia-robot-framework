@@ -79,7 +79,7 @@ Alternativas:
     D) Nenhuma das alternativas anteriores.
 ```
 
-Resposta: 
+Resposta: Alternativa A
 
 ```bash
 7. Dado que o ambiente está configurado para execução de testes automatizados utilizando o Selenium WebDriver, indique a alternativa correta para o código abaixo:
@@ -111,7 +111,7 @@ Alternativas:
     E) Nenhuma das alternativas anteriores.
 ```
 
-Resposta: 
+Resposta: Alternativa A 
 
 ```bash
 8.Complete os espaços em branco sobre os verbos HTTP:
