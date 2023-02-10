@@ -12,7 +12,7 @@ Resposta:
 2. Na sua opinião, quais são as principais razões para se investir em automação de testes?
 ```
 
-Resposta: 
+Resposta: A automação de testes evita muito do erro humano que acontecer dentro dos testes manuais, além disso aumenta também a velocidade e efetividade dos testes pois quando se faz testes manuais tendemos a ter um trabalho mais lento do que com as automações que podem ser executadas em questão de segundo ou até mesmo milisegundos. Outro ponto importante é que com a automação de testes nós conseguimos aumentar a cobertura de testes que um produto pode ter, visto que o tempo que seria perdido executando testes manuais nós gastar colocando as automações em uma pipeline de execução de testes continuo e enquanto novos testes são planejados e mapeados para serem desenvolvidos os outros testes, que ja estão prontos, ficam rodando sem precisar de alguém ali focado em executar aqueles cenários.
 
 ```bash
 3. Indique qual a alternativa correta em relação à diferença entre o re-testing e regression testing:
