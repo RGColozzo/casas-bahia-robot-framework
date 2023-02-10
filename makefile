@@ -1,0 +1,2 @@
+runwebtest:
+	python3 

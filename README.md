@@ -189,7 +189,7 @@ C) INSERT INTO Pedidos (cliente_id, produto, preco)
            (2, 'Fogão Consul', '850,90'),
            (3, 'Celular Iphone XR', '3399,00');
 
-D) SELECT * FROM Pedidos INNER JOIN Cliente ON Pedidos.cliente_id = Cliente.id WHERE Cliente.sobrenome = 'Silva';
+D) SELECT * FROM Pedidos WHERE client_id IN (SELECT id FROM Cliente WHERE sobrenome = 'Silva');
 
 E) DROP TABLE Pedidos;
     
