@@ -200,11 +200,17 @@ Considerando a pesquisa de artigos do blog (lupa no canto superior esquerdo), li
 
 Resposta: 
 
-CT001 - Buscar por algo que exista no blog
-CT002 - Buscar por algo que não exista no blog
-CT003 - Cancelar uma busca clicando no X
-CT004 - Fazer uma busca sem digitar nada no campo de texto
-CT005 - Validar texto do campo e do botão
+1) Buscar por algo que exista no blog
+
+2) Buscar por algo que não exista no blog
+
+3) Cancelar uma busca clicando no X
+
+4) Fazer uma busca sem digitar nada no campo de texto
+
+5) Validar texto do campo e do botão
+
+6) Fazer uma nova busca apos não encontrar o que buscou anteriormente
 
 ```bash
 11. Escolha a linguagem de programação de sua preferência para automatizar os dois principais cenários da questão anterior.
