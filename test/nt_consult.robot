@@ -12,12 +12,16 @@ Test Teardown    Close Browser
 
 *** Test Case ***
 TC001 - Search for something that exists in the blog
+    [Tags]    @ntconsult
+    
     Given    that I see the logo of blogdoagi website
     When     I go to the search area
     And      I try to search for something that exists in the blog
     Then     page should contains the message "Resultado da busca por: cartão benefícios"
     
 TC002 - Search for something that does not exists in the blog
+    [Tags]    @ntconsult
+
     Given    that I see the logo of blogdoagi website
     When     I go to the search area
     And      I try to search for something that dont exists in the blog
