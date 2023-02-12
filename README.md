@@ -223,4 +223,4 @@ DICAS ÚTEIS:
 3. Qualquer problema entre em contato com o recrutador. Nosso time estará à disposição para tirar dúvidas.
 ```
 
-Resposta: Arquivos necessários para execução da automação encontram-se neste repositório.
+Para executar a automação basta acessar o diretório do projeto (após clonado) pelo terminal e digitar *make runtest*.
