@@ -100,7 +100,7 @@ runtest:
 Para executar, basta digitar o seguinte comando no seu Git Bash:
 
 ```bash
-$ make runtest
+$ $ make runAlltests && make createmetrics
 ```
 
 ### Autor
@@ -213,7 +213,7 @@ runtest:
 To execute, simply type the following command in your Git Bash:
 
 ```bash
-$ make runtest
+$ $ make runAlltests && make createmetrics
 ```
 
 ### Author
