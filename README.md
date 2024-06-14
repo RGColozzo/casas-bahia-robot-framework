@@ -90,14 +90,26 @@ Agora que temos tudo configurado, vamos rodar o script? Então bora!
 ### Execução
 ---
 
-Você deve ter percebido que dentro do repositório que você clonou existe um arquivo chamado "makefile". Este arquivo contém o comando necessário para que possamos executar os cenários de testes automatizados criados, como podemos ver abaixo:
+Você deve ter percebido que dentro do repositório que você clonou existe um arquivo chamado "makefile". Este arquivo contém os comandos necessários para que possamos executar os cenários de testes automatizados criados, como podemos ver abaixo:
 
 ```bash
-runtest:
+runreq:
+	pip install -r requirements.txt
+
+runAlltests:
 	python -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
+
+runPtests:
+	python -m robot -d logs -i @positive -L debug test/casas_bahia.robot
+
+runNtests:
+	python -m robot -d logs -i @negative -L debug test/casas_bahia.robot
+
+createmetrics:
+	robotmetrics -M metrics-dashboard.html --inputpath ./logs/ --output output.xml
 ```
 
-Para executar, basta digitar o seguinte comando no seu Git Bash:
+Para executar todos os cenários de teste, basta digitar o seguinte comando no seu Git Bash:
 
 ```bash
 $ $ make runAlltests && make createmetrics
@@ -203,14 +215,26 @@ Now that everything is set up, shall we run the script? Let's go!
 ### Execution
 ---
 
-You may have noticed that inside the repository you cloned, there is a file called "makefile". This file contains the necessary command for us to execute the created automated test scenarios, as we can see below:
+You might have noticed that inside the repository you cloned there's a file called 'makefile.' This file contains the necessary commands for us to execute the automated test scenarios created, as we can see below:
 
 ```bash
-runtest:
+runreq:
+	pip install -r requirements.txt
+
+runAlltests:
 	python -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
+
+runPtests:
+	python -m robot -d logs -i @positive -L debug test/casas_bahia.robot
+
+runNtests:
+	python -m robot -d logs -i @negative -L debug test/casas_bahia.robot
+
+createmetrics:
+	robotmetrics -M metrics-dashboard.html --inputpath ./logs/ --output output.xml
 ```
 
-To execute, simply type the following command in your Git Bash:
+To run all test scenarios, simply type the following command in your Git Bash:
 
 ```bash
 $ $ make runAlltests && make createmetrics
@@ -222,5 +246,3 @@ $ $ make runAlltests && make createmetrics
 Made by [Rennan Gimenez](https://www.instagram.com/rennangimenez/)!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Rennan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rennan-gimenez/)](https://www.linkedin.com/in/rennan-gimenez/)
-
-
