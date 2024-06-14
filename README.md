@@ -1,5 +1,5 @@
-# 🇺🇸 | Test for Casas Bahia
-## 🤖 | Automation tests using Robot Framework & Selenium
+# 🇺🇸 | Testes para Casas Bahia
+## 🤖 | Automação de testes com Robot Framework e Selenium
 
 <p align="center">
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
@@ -11,45 +11,63 @@
 ### Pré-Requisitos
 ---
 
-Antes de começar, você vai precisar ter instalado em sua máquina as ferramentas abaixo:
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 
 - [x] [Python](https://www.python.org)
 - [x] [VSCode](https://code.visualstudio.com/)
 - [x] [Git Bash](https://git-scm.com/downloads)
 
-Antes de começarmos as configurações das ferramentas de automação, vamos primeiro clonar este repositório. Para isso, utilize o comando abaixo no seu Git Bash:
+Agora com as ferramentas instaladas vamos clonar este repositório. Para isso, utilize o comando abaixo no seu Git Bash (dentro do diretório que você deseja clonar o repositório):
 
 ```bash
 $ git clone https://github.com/RGColozzo/test-for-casas-bahia.git
 ```
 
-Feito isso, agora podemos começar a instalar e configurar o Robot Framework e a biblioteca do Selenium!
+Feito isso, agora podemos instalar o Robot Framework e a biblioteca do Selenium!
 
 ### Configuração
 ---
 
-✅ *PASSO 1* - Abra seu Git Bash para instalar o Robot Framework e a biblioteca do Selenium (siga os comandos abaixo):
+✅ *PASSO 1* - Abra seu Git Bash e execute os seguintes comandos:
 
 ```bash
-# Instale o robot framework
-$ pip install robotframework
+# Validar versão do Python
+$ python --version
 
-# Instale a biblioteca do selenium
-$ pip install robotframework-selenium2library
+# Validar versão do Pip
+$ pip --version
 ```
 
-✅ *PASSO 2* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste.
-**Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível.**
+Após executar os 2 comandos, você deverá ver algo parecido com as linhas abaixo:
+
+```bash
+$ python --version
+$ Python 3.12.4
+
+$ pip --version
+$ pip 24.0 from C:\Users\{USER}\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
+```
+
+**Obs.: Caso veja algo diferente, ou algum erro seja apresentado, volte ao pré-requisito e faça a instalação do Python novamente.**
+
+✅ *PASSO 2* - Se tiver dado tudo certo no *PASSO 1*, basta executar o comando abaixo:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+✅ *PASSO 3* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão.
+**Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.**
 
 ✅ *PASSO 3* - Tire o arquivo baixado de dentro do .zip (ou .rar).
 
-✅ *PASSO 4* - Vá até o seu disco C: e crie uma pasta chamada "Automation Drivers".
+✅ *PASSO 4* - Vá até o seu disco local C: e crie uma pasta chamada "drivers".
 
 ✅ *PASSO 5* - Coloque o arquivo chromedriver.exe dentro da pasta criada no passo anterior.
 
-✅ *PASSO 6* - Edite a varável PATH e adicione nela o caminho do seu driver do chrome (C:\Automation Drivers\chromedriver.exe).
+✅ *PASSO 6* - Edite a varável PATH e adicione nela o caminho do seu driver do chrome (C:\drivers\chromedriver.exe).
 
-Agora que temos tudo configurado, vamos rodar o script? Bora lá!
+Agora que temos tudo configurado, vamos rodar o script? Então bora!
 
 ### Execução
 ---
@@ -79,6 +97,6 @@ Para executar, basta dar um duplo clique no arquivo **exec.sh**!
 ### Autor
 ---
 
-Feito por [Rennan Gimenez](https://www.facebook.com/RennanGimenez)!
+Feito por [Rennan Gimenez](https://www.instagram.com/rennanrimenez)!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Rennan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rennan-gimenez/)](https://www.linkedin.com/in/rennan-gimenez/)
