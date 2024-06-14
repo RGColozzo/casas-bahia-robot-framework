@@ -64,21 +64,26 @@ $ pip 24.0 from C:\Users\{USER}\AppData\Local\Programs\Python\Python312\Lib\site
 
 *Obs.: Caso veja algo diferente, ou algum erro seja apresentado, volte aos <a href="#Pré-Requisitos">Pré-Requisitos</a> e faça a instalação do Python ou do MinGW novamente (a depender do erro).*
 
-✅ *PASSO 2* - Se tiver dado tudo certo no *PASSO 1*, basta executar o comando abaixo:
+✅ *PASSO 2* - Agora vamos até a pasta de instalação do MinGW para realizar uma alteração e facilitar nossa execução dos próximos comandos. Dentro da pasta *C:\MinGW\bin* você encontrará um arquivo chamado *mingw32-make.exe*, basta renomear o mesmo para *make.exe* e salvar.
+
+
+✅ *PASSO 3* - Se tiver dado tudo certo nos passos anteriores, agora basta executar o comando abaixo:
 
 ```bash
 $ make runreq
 ```
 
-✅ *PASSO 3* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão. *Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.*
+*Com isso as depêndencias do projeto (robot e selenium) serão instaladas automaticamente.*
 
-✅ *PASSO 3* - Tire o arquivo baixado de dentro do .zip (ou .rar).
+✅ *PASSO 4* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão. *Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.*
 
-✅ *PASSO 4* - Vá até o seu disco local C: e crie uma pasta chamada "drivers".
+✅ *PASSO 5* - Tire o arquivo baixado de dentro do .zip (ou .rar).
 
-✅ *PASSO 5* - Coloque o arquivo chromedriver.exe dentro da pasta criada no passo anterior.
+✅ *PASSO 6* - Vá até o seu disco local C: e crie uma pasta chamada "drivers".
 
-✅ *PASSO 6* - Edite a variável PATH e adicione nela o caminho do seu driver do chrome (C:\drivers\chromedriver.exe).
+✅ *PASSO 7* - Coloque o arquivo chromedriver.exe dentro da pasta criada no passo anterior.
+
+✅ *PASSO 8* - Edite a variável PATH e adicione nela o caminho do seu driver do chrome (C:\drivers\chromedriver.exe).
 
 Agora que temos tudo configurado, vamos rodar o script? Então bora!
 
