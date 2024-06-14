@@ -1,5 +1,5 @@
-# 🇺🇸 | Testes para Casas Bahia
-## 🤖 | Automação de testes com Robot Framework e Selenium
+# Automação de Teste - Casas Bahia
+## 🤖 | Robot Framework + Selenium
 
 <p align="center">
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
