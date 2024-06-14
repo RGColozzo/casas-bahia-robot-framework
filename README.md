@@ -16,6 +16,9 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 - [x] [Python](https://www.python.org)
 - [x] [VSCode](https://code.visualstudio.com/)
 - [x] [Git Bash](https://git-scm.com/downloads)
+- [x] [MinGW](https://osdn.net/projects/mingw/releases/?source=post_page-----b4d115d7c516--------------------------------)
+
+Antes de iniciarmos a instalação do Robot Framework, lembre-se de editar a sua variável PATH (nas variavies de ambiente) adicionando o caminho "C:\MinGW\bin". *Sem isso não conseguiremos rodar o comando make para executar a nossa suite de testes automatizados.*
 
 Agora com as ferramentas instaladas vamos clonar este repositório. Para isso, utilize o comando abaixo no seu Git Bash (dentro do diretório que você deseja clonar o repositório):
 
@@ -23,14 +26,22 @@ Agora com as ferramentas instaladas vamos clonar este repositório. Para isso, u
 $ git clone https://github.com/RGColozzo/test-for-casas-bahia.git
 ```
 
-Feito isso, agora podemos instalar o Robot Framework e a biblioteca do Selenium!
+Feito isso, agora podemos instalar o MinGW, o Robot Framework e a biblioteca do Selenium!
 
 ### Configuração
 ---
 
-✅ *PASSO 1* - Abra seu Git Bash e execute os seguintes comandos:
+✅ *PASSO 0* - Abra o CMD (como administrador) e execute o seguinte comando para instalar o MinGW:
+```bash
+$ mingw-get install mingw32-make
+```
+
+✅ *PASSO 1* - Agora abra o Git Bash e execute os seguintes comandos:
 
 ```bash
+# Validar versão do GNU Make
+$ mingw32-make --version
+
 # Validar versão do Python
 $ python --version
 
@@ -38,9 +49,12 @@ $ python --version
 $ pip --version
 ```
 
-Após executar os 2 comandos, você deverá ver algo parecido com as linhas abaixo:
+Após executar os comandos, você deverá ver algo parecido com as linhas abaixo:
 
 ```bash
+$ mingw32-make --version
+$ GNU Make 3.82.90
+
 $ python --version
 $ Python 3.12.4
 
@@ -48,16 +62,15 @@ $ pip --version
 $ pip 24.0 from C:\Users\{USER}\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12)
 ```
 
-**Obs.: Caso veja algo diferente, ou algum erro seja apresentado, volte ao pré-requisito e faça a instalação do Python novamente.**
+*Obs.: Caso veja algo diferente, ou algum erro seja apresentado, volte aos <a href="#Pré-Requisitos">Pré-Requisitos</a> e faça a instalação do Python ou do MinGW novamente (a depender do erro).*
 
 ✅ *PASSO 2* - Se tiver dado tudo certo no *PASSO 1*, basta executar o comando abaixo:
 
 ```bash
-$ pip install -r requirements.txt
+$ make runreq
 ```
 
-✅ *PASSO 3* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão.
-**Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.**
+✅ *PASSO 3* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão. *Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.*
 
 ✅ *PASSO 3* - Tire o arquivo baixado de dentro do .zip (ou .rar).
 
@@ -65,34 +78,25 @@ $ pip install -r requirements.txt
 
 ✅ *PASSO 5* - Coloque o arquivo chromedriver.exe dentro da pasta criada no passo anterior.
 
-✅ *PASSO 6* - Edite a varável PATH e adicione nela o caminho do seu driver do chrome (C:\drivers\chromedriver.exe).
+✅ *PASSO 6* - Edite a variável PATH e adicione nela o caminho do seu driver do chrome (C:\drivers\chromedriver.exe).
 
 Agora que temos tudo configurado, vamos rodar o script? Então bora!
 
 ### Execução
 ---
 
-Você deve ter percebido que dentro do repositório que você baixou existe uma pasta chamada "script" e dentro dela temos um arquivo chamado "exec.sh".
-
-Este arquivo contém os comandos necessários para que possamos executar tanto um **CENÁRIO OK** quanto um **CENÁRIO NÃO OK** do nosso teste automatizado, como podemos ver abaixo:
+Você deve ter percebido que dentro do repositório que você clonou existe um arquivo chamado "makefile". Este arquivo contém o comando necessário para que possamos executar os cenários de testes automatizados criados, como podemos ver abaixo:
 
 ```bash
-#!/bin/sh
-
-EMAIL_OK=rennan.colozzo18@hotmail.com
-PASSWD_OK=teste123
-
-EMAIL_NOK=teste@teste.123
-PASSWD_NOK=teste
-
-#Execução do cenário OK
-robot -d '..\results\OK\' -t 'Buy a product' -v EMAIL:$EMAIL_OK -v PASSWD:$PASSWD_OK '..\tests\buy_product.robot'
-
-#Execução do cenário não OK
-robot -d '..\results\NÃO OK\' -t 'Buy a product' -v EMAIL:$EMAIL_NOK -v PASSWD:$PASSWD_NOK '..\tests\buy_product.robot'
+runtest:
+	python3 -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
 ```
 
-Para executar, basta dar um duplo clique no arquivo **exec.sh**!
+Para executar, digitar o seguinte comando no seu Git Bash:
+
+```bash
+$ make runtest
+```
 
 ### Autor
 ---
