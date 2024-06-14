@@ -1,0 +1,9 @@
+btn_filter:
+  chrome:
+    selector: xpath=
+    value: //*[@type='checkbox']
+
+img_headset:
+  chrome:
+    selector: xpath=
+    value: //*[@alt='Headset Stereo Kmex Gatinha AR31']
