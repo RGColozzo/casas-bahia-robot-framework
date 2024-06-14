@@ -4,13 +4,15 @@ Library     ../lib/Casas_Bahia.py
 
 *** Keywords ***
 load page object
-    ${HOME_PAGE}=           get_page_attributes    homepage
-    ${NOT_FOUND_PAGE}=      get_page_attributes    notfoundpage
-    ${SEARCH_PAGE}=         get_page_attributes    searchpage
+    ${HOME_PAGE}=               get_page_attributes    homepage
+    ${NOT_FOUND_PAGE}=          get_page_attributes    notfoundpage
+    ${SEARCH_PAGE}=             get_page_attributes    searchpage
+    ${SMARTPHONE_PAGE}=         get_page_attributes    smartphonepage
 
     Set Suite Variable    ${HOME_PAGE}
     Set Suite Variable    ${NOT_FOUND_PAGE}
     Set Suite Variable    ${SEARCH_PAGE}
+    Set Suite Variable    ${SMARTPHONE_PAGE}
 
 start browser
     Open Browser    ${BASE_URL}    ${BROWSER}

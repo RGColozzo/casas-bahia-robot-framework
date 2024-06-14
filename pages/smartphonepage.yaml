@@ -1,0 +1,19 @@
+img_smartphone:
+  chrome:
+    selector: xpath=
+    value: //*[@data-testid='product-card-desktop']
+  
+btn_buy:
+  chrome:
+    selector: xpath=
+    value: //*[@id='buy-button']
+
+btn_not_now:
+  chrome:
+    selector: xpath=
+    value: //*[@data-testid='agora_nao']
+
+txt_my_cart:
+  chrome:
+    selector: xpath=
+    value: //*[text()='Meu carrinho']
