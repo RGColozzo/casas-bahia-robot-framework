@@ -1,0 +1,14 @@
+img_logo:
+  chrome:
+    selector: xpath=
+    value: //a[@data-testid='logo']
+
+input_search:
+  chrome:
+    selector: id=
+    value: "search-form-input"
+
+btn_search:
+  chrome:
+    selector: xpath=
+    value: //button[@data-testid='search-form-button']
