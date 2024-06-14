@@ -10,14 +10,13 @@ Suite Setup    load page object
 Test Setup     start browser
 Test Teardown    Close Browser
 
-*** Test Case ***
-TC001 - Search for something that exists in the blog
-    [Tags]    @casasbahia
+*** Test Cases ***
+TC002 - P - Product search by keyword
+    [Tags]  @casasbahia  @positive
     
-    Given    that I see the logo of blogdoagi website
-    When     I go to the search area
-    And      I try to search for something that exists in the blog
-    Then     page should contains the message "Resultado da busca por: cartão benefícios"
+    Given   that the user is on the homepage of Ponto Frio
+    When    they type "smartphone" in the search bar and press Enter
+    Then    they should see a list of products related to smartphones
     
 TC002 - Search for something that does not exists in the blog
     [Tags]    @casasbahia

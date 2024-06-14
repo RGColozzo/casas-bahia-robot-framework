@@ -8,7 +8,7 @@ load page object
 
     Set Suite Variable    ${HOME_PAGE}
 
-Start browser
+start browser
     Open Browser    ${BASE_URL}    ${BROWSER}
 
 that I see the logo of blogdoagi website

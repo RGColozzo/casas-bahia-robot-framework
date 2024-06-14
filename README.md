@@ -94,7 +94,7 @@ Você deve ter percebido que dentro do repositório que você clonou existe um a
 
 ```bash
 runtest:
-	python3 -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
+	python -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
 ```
 
 Para executar, basta digitar o seguinte comando no seu Git Bash:
@@ -207,7 +207,7 @@ You may have noticed that inside the repository you cloned, there is a file call
 
 ```bash
 runtest:
-	python3 -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
+	python -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
 ```
 
 To execute, simply type the following command in your Git Bash:

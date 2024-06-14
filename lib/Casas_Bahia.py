@@ -1,55 +1,51 @@
-import json
 import os
-import random
+import yaml
 from collections import namedtuple
-import  yaml
 from robot.libraries.BuiltIn import BuiltIn
 
 def load_page_attributes(page):
-    # try to load from local folder
-    print("----------")
-    
-    file_name = "{}.yaml".format(page)
-    
-    test_path = os.path.abspath(
-        os.path.join(BuiltIn().get_variable_value("${SUITE_SOURCE}"), os.pardir)
-    )
-    local_page = "{}/pages/{}".format(test_path, file_name)
+    file_name = f"{page}.yaml"
+    test_path = os.path.abspath(os.path.join(BuiltIn().get_variable_value("${SUITE_SOURCE}"), os.pardir))
+    local_page = f"{test_path}/pages/{file_name}"
     
     try:
-        print("Trying to load local page object: {}".format(local_page))
         with open(local_page) as file:
-            return yaml.load(file, Loader=yaml.FullLoader)
-    except Exception:
-        print("Could not load local page object")
-        
+            return yaml.safe_load(file)
+    except Exception as e:
+        print(f"Could not load local page object: {e}")
+        return None
+
 def select_os(yaml_page):
-    os = BuiltIn().get_variable_value("${G_OS}")
-    os = os.lower()
-    print("os: ")
-    print(os)
+    os = BuiltIn().get_variable_value("${BROWSER}").lower()
     page = {}
-    for key in yaml_page.keys():
-        print("key: ")
-        print(key)
-        if yaml_page[key][os]["selector"] == "text":
-            page[key] = yaml_page[key][os]["value"]
+    
+    for key, value in yaml_page.items():
+        selector = value.get(os, {}).get("selector", "")
+        selector_value = value.get(os, {}).get("value", "")
+        
+        if selector == "text":
+            page[key] = selector_value
         else:
-            if yaml_page[key][os]["selector"] and yaml_page[key][os]["value"]:
-                page[key] = yaml_page[key][os]["selctor"] + yaml_page[key][os]["value"]
-            else:
-                page[key] = "Selector empty, please go to the page object definition and fill it with a not empty value"
+            page[key] = f"{selector}{selector_value}" if selector and selector_value else \
+                        "Selector empty, please go to the page object definition and fill it with a not empty value"
         
     return page
 
 def get_page_attributes(page):
     yaml_page = load_page_attributes(page)
-    page_current_device = json.dumps(select_os(yaml_page))
+    
+    if not yaml_page:
+        print(f"Failed to load page attributes for {page}")
+        return None
+    
+    page_current_device = select_os(yaml_page)
+    
+    if not page_current_device:
+        print(f"Failed to select OS for {page}")
+        return None
     
     try:
-        page_object = json.loads(
-            page_current_device, object_hook=lambda d: namedtuple("X", d.keys())(*d.values())
-        )
-        return page_object
-    except Exception:
-        print("An exception ocurred when trying to convert json to object")
+        return namedtuple("X", page_current_device.keys())(*page_current_device.values())
+    except Exception as e:
+        print(f"Failed to convert JSON to object: {e}")
+        return None
