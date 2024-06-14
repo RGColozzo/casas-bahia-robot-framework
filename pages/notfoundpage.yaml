@@ -1,0 +1,4 @@
+img_notfound:
+  chrome:
+    selector: xpath=
+    value: //img[@data-testid='hero-image-pf']
