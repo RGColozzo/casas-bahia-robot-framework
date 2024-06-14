@@ -20,10 +20,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as ferrament
 Antes de começarmos as configurações das ferramentas de automação, vamos primeiro clonar este repositório. Para isso, utilize o comando abaixo no seu Git Bash:
 
 ```bash
-$ git clone https://github.com/RGColozzo/primecontrol-automation.git
+$ git clone https://github.com/RGColozzo/test-for-casas-bahia.git
 ```
 
-Feito isso, agora podemos começar a instalar e configurar o 🤖 Robot Framework e a biblioteca do Selenium!
+Feito isso, agora podemos começar a instalar e configurar o Robot Framework e a biblioteca do Selenium!
 
 ### Configuração
 ---
