@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../base.robot
 Resource    ../common/common_keywords.robot
-Library     ../lib/NT_Consult.py
+Library     ../lib/Casas_Bahia.py
 
 *** Keywords ***
 I try to search for something that dont exists in the blog

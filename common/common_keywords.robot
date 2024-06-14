@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../base.robot
-Library     ../lib/NT_Consult.py
+Library     ../lib/Casas_Bahia.py
 
 *** Keywords ***
 load page object

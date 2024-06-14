@@ -1,11 +1,11 @@
 *** Settings ***
 Library    Selenium2Library
 
-Documentation    Test for NT Consult Job
+Documentation    Test for Casas Bahia
 
 *** Variables ***
-${BASE_URL}                   https://blogdoagi.com.br
+${BASE_URL}                   https://pontofrio.com.br
 ${BROWSER}                    chrome
-${VALID_TEXT_FOR_SEARCH}      cartão benefícios
-${INVALID_TEXT_FOR_SEARCH}    chamberlau
+${VALID_TEXT_FOR_SEARCH}      smartphone
+${INVALID_TEXT_FOR_SEARCH}    just testing
 ${GENERAL_TIMEOUT}            30s
