@@ -75,7 +75,7 @@ $ make runreq
 
 *Com isso as depêndencias do projeto (robot e selenium) serão instaladas automaticamente.*
 
-✅ *PASSO 4* - Agora temos que baixar e salvar o driver: [Chromedriver](https://chromedriver.chromium.org/downloads), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão. *Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.*
+✅ *PASSO 4* - Agora temos que baixar e salvar o driver: [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/), pois iremos utilizar o Google Chrome como nosso navegador de teste padrão. *Obs.: Verifique a versão do seu navegador Google Chrome e faça download do driver compatível com a mesma.*
 
 ✅ *PASSO 5* - Tire o arquivo baixado de dentro do .zip (ou .rar).
 
@@ -97,7 +97,7 @@ runtest:
 	python3 -m robot -d logs -i @casasbahia -L debug test/casas_bahia.robot
 ```
 
-Para executar, digitar o seguinte comando no seu Git Bash:
+Para executar, basta digitar o seguinte comando no seu Git Bash:
 
 ```bash
 $ make runtest
