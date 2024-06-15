@@ -22,6 +22,7 @@ TC.002 - P - Product search by keyword
 
 TC.004 - P - Add product to cart
     [Documentation]     this test case will not work cause of cache/cookie issues
+    [Tags]  @casasbahia  @positive
 
     Given   that the user is on the product details page
     When    they click on the 'Buy' button
