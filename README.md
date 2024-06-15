@@ -105,14 +105,23 @@ runPtests:
 runNtests:
 	python -m robot -d logs -i @negative -L debug test/casas_bahia.robot
 
-createmetrics:
+run1test:
+	python -m robot -d logs -i @1test -L debug test/casas_bahia.robot
+
+runMetrics:
 	robotmetrics -M metrics-dashboard.html --inputpath ./logs/ --output output.xml
 ```
 
 Para executar todos os cenários de teste, basta digitar o seguinte comando no seu Git Bash:
 
 ```bash
-$ $ make runAlltests && make createmetrics
+$ make runAlltests
+```
+
+Após a finalização da execução da automação, execute o seguinte comando no seu Git Bash para gerar o dashboard de métricas:
+
+```bash
+$ make runMetrics
 ```
 
 ### Autor
@@ -230,14 +239,23 @@ runPtests:
 runNtests:
 	python -m robot -d logs -i @negative -L debug test/casas_bahia.robot
 
-createmetrics:
+run1test:
+	python -m robot -d logs -i @1test -L debug test/casas_bahia.robot
+
+runMetrics:
 	robotmetrics -M metrics-dashboard.html --inputpath ./logs/ --output output.xml
 ```
 
-To run all test scenarios, simply type the following command in your Git Bash:
+To execute all test scenarios, simply type the following command in your Git Bash:
 
 ```bash
-$ $ make runAlltests && make createmetrics
+$ make runAlltests
+```
+
+After the automation execution completes, run the following command in your Git Bash to generate the metrics dashboard:
+
+```bash
+$ make runMetrics
 ```
 
 ### Author

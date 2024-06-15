@@ -10,8 +10,8 @@ runPtests:
 runNtests:
 	python -m robot -d logs -i @negative -L debug test/casas_bahia.robot
 
-runtest:
+run1test:
 	python -m robot -d logs -i @1test -L debug test/casas_bahia.robot
 
-createmetrics:
+runMetrics:
 	robotmetrics -M metrics-dashboard.html --inputpath ./logs/ --output output.xml
