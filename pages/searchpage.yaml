@@ -6,4 +6,4 @@ btn_filter:
 img_headset:
   chrome:
     selector: xpath=
-    value: //*[@alt='Headset Stereo Kmex Gatinha AR31']
+    value: //*[@alt='Fone de Ouvido Headset Gamer JBL Quantum 100 Preto']

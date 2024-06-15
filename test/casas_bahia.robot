@@ -20,8 +20,10 @@ TC.002 - P - Product search by keyword
     When    they type "smartphone" in the search bar and press Enter
     Then    they should see a list of products related to smartphones
 
+# This test case bellow (TC.004) won't work due to an issue with cache/cookies that automation is encountering when trying to add a product to the cart.
+# I explain this in more details in the analysis of results document (Análise de resultado dos testes.pdf).
 TC.004 - P - Add product to cart
-    [Documentation]     this test case will not work cause of cache/cookie issues
+    [Documentation]      not working cause of cookies
     [Tags]  @casasbahia  @positive
 
     Given   that the user is on the product details page
