@@ -23,7 +23,7 @@ Antes de iniciarmos a instalação do Robot Framework, lembre-se de editar a sua
 Agora com as ferramentas instaladas vamos clonar este repositório. Para isso, utilize o comando abaixo no seu Git Bash (dentro do diretório que você deseja clonar o repositório):
 
 ```bash
-$ git clone https://github.com/RGColozzo/test-for-casas-bahia.git
+$ git clone [https://github.com/RGColozzo/test-for-casas-bahia.git](https://github.com/RGColozzo/casas-bahia-robot-framework.git)
 ```
 
 Feito isso, agora podemos instalar o MinGW, o Robot Framework e a biblioteca do Selenium!
@@ -158,7 +158,7 @@ Before we begin installing Robot Framework, remember to edit your PATH variable 
 Now that the tools are installed, let's clone this repository. To do this, use the command below in your Git Bash (inside the directory where you want to clone the repository):
 
 ```bash
-$ git clone https://github.com/RGColozzo/test-for-casas-bahia.git
+$ git clone [https://github.com/RGColozzo/test-for-casas-bahia.git](https://github.com/RGColozzo/casas-bahia-robot-framework.git)
 ```
 
 Once done, we can now install MinGW, Robot Framework, and the Selenium library!
